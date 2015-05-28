@@ -1,5 +1,6 @@
-# CV Template 2004
+# CV Template
 
-You can also find a modified version of this template on [latextemplates.com](http://www.latextemplates.com/template/wilson-resume-cv).
+Adapted from watsonbox/cv\_template\_2004.
 
-![Screenshot](https://raw.githubusercontent.com/watsonbox/cv_template_2004/master/cv.jpg)
+Sample CV (see sample folder for .tex and .pdf):
+![Screenshot](https://raw.githubusercontent.com/eidens/cv_template_2004/master/sample/cv.jpg)
