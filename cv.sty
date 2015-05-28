@@ -75,8 +75,12 @@
 }
 
 % Skill
-\newcommand{\skill}[1]{\textit{#1}}
-\newcommand{\skilltext}[1]{#1}
+\newcommand{\skill}[1]{
+  \textit{#1}
+}
+\newcommand{\skillproficiency}[2]{
+  \skill{#1} - #2\\ % skill - proficiency
+}
 
 % Other definitions
 \def\sqbullet{~\vrule height 1ex width .8ex depth -.2ex }
