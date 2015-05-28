@@ -60,6 +60,31 @@
 
 %----------------------------------------------------------------------------------------
 
+% two-column section for contact/misc information, simply implemented
+% as a table
+\newenvironment{cvinfosection}[2]{
+  \begin{tabular}{
+    @{\hspace{-0.9em}} % havent found a better way to left-align the
+                       % info section with everything else
+    l | l % both cvinfocolumns left aligned
+}
+    #1 & #2
+  \end{tabular}
+}
+
+\newenvironment{cvinfocolumn}[8]{
+  {\renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{l l}
+      {\bf #1} & #2 \\
+      {\bf #3} & #4 \\
+      {\bf #5} & #6 \\
+      {\bf #7} & #8 \\
+    \end{tabular}
+  }
+}
+
+%----------------------------------------------------------------------------------------
+
 % education history environment
 % from / to / firm+address / position
 \newenvironment{education}[5]{
