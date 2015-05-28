@@ -45,6 +45,8 @@
 \setlength{\smallertextwidth}{\textwidth}
 \addtolength{\smallertextwidth}{-2cm}
 
+%----------------------------------------------------------------------------------------
+
 % Employment history job environment
 % from / to / firm+address / position
 \newenvironment{job}[5]
@@ -62,7 +64,8 @@
 	\end{tabbing}
 }
 
-% Skill group
+%----------------------------------------------------------------------------------------
+
 \newenvironment{skillgroup}[1]
 {
 	\begin{tabbing}%
@@ -74,7 +77,6 @@
 	\end{tabbing}
 }
 
-% Skill
 \newcommand{\skill}[1]{
   \textit{#1}
 }
@@ -82,5 +84,21 @@
   \skill{#1} - #2\\ % skill - proficiency
 }
 
-% Other definitions
-\def\sqbullet{~\vrule height 1ex width .8ex depth -.2ex }
+%----------------------------------------------------------------------------------------
+
+\newcommand{\interestsgroup}[1]{
+\begin{tabbing}
+\hspace{5mm} \= \kill
+#1
+\end{tabbing}
+\vspace{-10mm}
+}
+
+\newcommand{\interest}[1]{
+  \sqbullet \> \textbf{#1}\\[3pt]
+}
+
+%----------------------------------------------------------------------------------------
+
+% Custom square bullet point definition
+\newcommand{\sqbullet}{~\vrule height 1ex width .8ex depth -.2ex}
