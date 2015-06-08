@@ -43,7 +43,7 @@
 \setlength{\smalltextwidth}{\textwidth}
 \addtolength{\smalltextwidth}{-0.5cm}
 \setlength{\smallertextwidth}{\textwidth}
-\addtolength{\smallertextwidth}{-2cm}
+\addtolength{\smallertextwidth}{-3.5cm}
 
 %----------------------------------------------------------------------------------------
 
@@ -72,13 +72,11 @@
   \end{tabular}
 }
 
-\newenvironment{cvinfocolumn}[8]{
+\newenvironment{cvinfocolumn}[4]{
   {\renewcommand{\arraystretch}{1.5}
     \begin{tabular}{l l}
       {\bf #1} & #2 \\
       {\bf #3} & #4 \\
-      {\bf #5} & #6 \\
-      {\bf #7} & #8 \\
     \end{tabular}
   }
 }
@@ -86,13 +84,27 @@
 %----------------------------------------------------------------------------------------
 
 % education history environment
-% from / to / firm+address / position
+% from / to / type / place / final grade
 \newenvironment{education}[5]{
   \begin{tabbing}
-    \hspace{2cm} \= \kill
-    \textbf{#1} \> \textbf{#3} \\
-    \textbf{#2} \>\+ \textit{#4} \\[0.25em]
+    \hspace{3.5cm} \= \kill
+    \textbf{#1} - \textbf{#2}
+    \> \textbf{#3} \\
+    \>\+ \textit{#4} \\[0.25em]
     #5
+  \end{tabbing}
+}
+
+%----------------------------------------------------------------------------------------
+
+% short education history environment
+% from / to / type / place
+\newenvironment{educationshort}[4]{
+  \begin{tabbing}
+    \hspace{3.5cm} \= \kill
+    \textbf{#1} - \textbf{#2}
+    \> \textbf{#3} \\
+    \>\+ \textit{#4}
   \end{tabbing}
 }
 
@@ -102,15 +114,29 @@
 % from / to / firm+address / position
 \newenvironment{job}[5]{
   \begin{tabbing}
-    \hspace{2cm} \= \kill
-    \textbf{#1} \> \textbf{#3} \\
-    \textbf{#2} \>\+ \href{#5}{#4} \\
+    \hspace{3.5cm} \= \kill
+    \textbf{#1} - \textbf{#2}
+    \> \textbf{#3} \\
+    \>\+ \href{#5}{#4} \\
     \begin{minipage}{\smallertextwidth}
       \rule{0mm}{5mm}
     }
     {
-      \\\vspace{-1mm}
+      \vspace{-1mm}
     \end{minipage}
+  \end{tabbing}
+}
+
+%----------------------------------------------------------------------------------------
+
+% Employment history job environment
+% from / to / firm+address / position
+\newenvironment{jobshort}[5]{
+  \begin{tabbing}
+    \hspace{3.5cm} \= \kill
+    \textbf{#1} - \textbf{#2}
+    \> \textbf{#3} \\
+    \>\+ \href{#5}{#4}
   \end{tabbing}
 }
 
