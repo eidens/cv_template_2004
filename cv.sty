@@ -72,8 +72,19 @@
   \end{tabular}
 }
 
-\newenvironment{cvinfocolumn}[4]{
-  {\renewcommand{\arraystretch}{1.5}
+\newenvironment{cvinfo}[8]{
+  {\renewcommand{\arraystretch}{1.2}
+    \begin{tabular}{l l}
+      {\bf #1} & #2 \\
+      {\bf #3} & #4 \\
+      {\bf #5} & #6 \\
+      {\bf #7} & #8 \\
+    \end{tabular}
+  }
+}
+
+\newenvironment{cvinfoshort}[4]{
+  {\renewcommand{\arraystretch}{1.2}
     \begin{tabular}{l l}
       {\bf #1} & #2 \\
       {\bf #3} & #4 \\

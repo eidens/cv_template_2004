@@ -12,16 +12,20 @@
 
 %------------------------------------------------
 \begin{cvinfosection}{
-  \begin{cvinfocolumn}
+  \begin{cvinfo}
     {Address}{406 Jett Lane}
     {}{Pomona, CA 91766}
-  \end{cvinfocolumn}
+    {Date of Birth}{March 9, 1985}
+    {}{}
+  \end{cvinfo}
 }
 {
-  \begin{cvinfocolumn}
+  \begin{cvinfo}
     {Phone}{310-706-2736}
     {Email}{\href{mailto:JeannetteJDavis@jourrapide.com}{JeannetteJDavis@jourrapide.com}}
-  \end{cvinfocolumn}
+    {Website}{\href{http://CartridgeExpo.com}{CartridgeExpo.com}}
+    {}{}
+  \end{cvinfo}
 }
 \end{cvinfosection}
 
@@ -47,12 +51,11 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis elementum nec dolo
 
 %------------------------------------------------
 
-\begin{education}
+\begin{educationshort}
   {2005}{2007}
   {Advanced Secondary Education}
   {Corfe Hills School, Broadstone, Dorset, England}
-  {}
-\end{education}
+\end{educationshort}
 
 %----------------------------------------------------------------------------------------
 %	EMPLOYMENT HISTORY SECTION
@@ -71,19 +74,36 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis elementum nec dolo
 
 %------------------------------------------------
 
-\begin{job}
+\begin{jobshort}
   {04/2010}{03/2013}
   {Consultant Analyst Programmer}
   {Facebook, Menlo Park, CA 94025, United States}
   {http://www.facebook.com}
-  {Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis elementum nec dolor:
+\end{jobshort}
 
-    \begin{itemize-noindent}
-    \item{Designing and developing an enterprise ASP.NET application for generic reporting, with a transactional COM+ serviced component middle-tier, and secure data access layer.}
-    \item{Working with the finance department to produce useful reports from complex data models.}
-    \end{itemize-noindent}
+\section*{Knowledge and Skills}
 
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis elementum nec dolor sed sagittis.}
-\end{job}
+%----------------------------------------------------------------------------------------
+%	LANGUAGE SKILLS SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{skillgroup}{Languages}
+  \skillproficiency{English}{first language}
+  \skillproficiency{Spanish}{excellent}
+  \skillproficiency{French}{proficient}
+\end{skillgroup}
+
+%----------------------------------------------------------------------------------------
+% INTERESTS SECTION
+%----------------------------------------------------------------------------------------
+
+\section*{Interests}
+
+\interestsgroup{
+  \interest{Hiking, Skiing}
+  \interest{Movies, Reading}
+}
+
+%----------------------------------------------------------------------------------------
 
 \end{document}
