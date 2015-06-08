@@ -187,3 +187,13 @@
 
 % Custom square bullet point definition
 \newcommand{\sqbullet}{~\vrule height 1ex width .8ex depth -.2ex}
+
+%----------------------------------------------------------------------------------------
+
+% signature line command, includes authors name, date and address
+\newcommand{\city}{}
+\newcommand{\makesignature}{
+  \vspace{3cm}
+  \@author{} \\
+  \city, \@date{}
+}
