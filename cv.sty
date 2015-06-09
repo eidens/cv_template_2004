@@ -152,21 +152,15 @@
 
 %----------------------------------------------------------------------------------------
 
-\newenvironment{skillgroup}[1]
-{
-	\begin{tabbing}
-	\hspace{5mm} \= \kill
-	\sqbullet \>\+ \textbf{#1} \\[0.25em]
-}
-{
-	\end{tabbing}
+\newenvironment{skillgroup}[1]{
+\textbf{#1} \\[0.25em]
 }
 
 \newcommand{\skill}[1]{
-  \textit{#1}\\
+  #1\\
 }
 \newcommand{\skillproficiency}[2]{
-  \textit{#1} - #2\\ % skill - proficiency
+  #1 - \textit{#2}\\ % skill - proficiency
 }
 
 %----------------------------------------------------------------------------------------
@@ -180,7 +174,7 @@
 }
 
 \newcommand{\interest}[1]{
-  \sqbullet \> \textbf{#1}\\[3pt]
+  \sqbullet \> #1\\[3pt]
 }
 
 %----------------------------------------------------------------------------------------
