@@ -92,89 +92,39 @@
 }
 
 %----------------------------------------------------------------------------------------
+\newcommand*{\timeframetimespan}[2]{\textbf{#1} - \textbf{#2}}
+\newcommand*{\timeframetitle}[1]{\textbf{#1}}
+\newcommand*{\timeframeplace}[1]{\textit{#1}}
+\newcommand*{\timeframeplacelink}[2]{\href{#2}{\textit{#1}}}
+\newcommand*{\timeframegrade}[2]{#1: #2}
 
-% education history environment
-% from / to / type / place / final grade
-\newenvironment{education}[5]{
-  \begin{tabbing}
-    \hspace{3.5cm} \= \kill
-    \textbf{#1} - \textbf{#2}
-    \> \textbf{#3} \\
-    \>\+ \textit{#4} \\[0.25em]
-    #5
-  \end{tabbing}
+\newcommand*{\timeframe}[5]{
+  \begin{tabular}{p{3.5cm} p{10.5cm}}
+    \timeframetimespan{#1}{#2} & \timeframetitle{#3} \\
+                               & \timeframeplace{#4} \\[0.25em]
+                               & #5 \\[0.75em]
+  \end{tabular}
+}
+
+\newcommand*{\timeframeshort}[4]{
+  \begin{tabular}{p{3.5cm} p{10.5cm}}
+    \timeframetimespan{#1}{#2} & \timeframetitle{#3} \\
+                               & \timeframeplace{#4} \\[0.75em]
+  \end{tabular}
 }
 
 %----------------------------------------------------------------------------------------
 
-% short education history environment
-% from / to / type / place
-\newenvironment{educationshort}[4]{
-  \begin{tabbing}
-    \hspace{3.5cm} \= \kill
-    \textbf{#1} - \textbf{#2}
-    \> \textbf{#3} \\
-    \>\+ \textit{#4}
-  \end{tabbing}
-}
+\newenvironment{skillgroup}[1]
+{\textbf{#1} \\[0.25em]
+  \begin{tabular}{l l l}}
+{\end{tabular} \\[0.5em]}
 
-%----------------------------------------------------------------------------------------
-
-% Employment history job environment
-% from / to / firm+address / position
-\newenvironment{job}[5]{
-  \begin{tabbing}
-    \hspace{3.5cm} \= \kill
-    \textbf{#1} - \textbf{#2}
-    \> \textbf{#3} \\
-    \>\+ \href{#5}{#4} \\
-    \begin{minipage}{\smallertextwidth}
-      \rule{0mm}{5mm}
-    }
-    {
-      \vspace{-1mm}
-    \end{minipage}
-  \end{tabbing}
-}
-
-%----------------------------------------------------------------------------------------
-
-% Employment history job environment
-% from / to / firm+address / position
-\newenvironment{jobshort}[5]{
-  \begin{tabbing}
-    \hspace{3.5cm} \= \kill
-    \textbf{#1} - \textbf{#2}
-    \> \textbf{#3} \\
-    \>\+ \href{#5}{#4}
-  \end{tabbing}
-}
-
-%----------------------------------------------------------------------------------------
-
-\newenvironment{skillgroup}[1]{
-\textbf{#1} \\[0.25em]
-}
-
-\newcommand{\skill}[1]{
-  #1\\
-}
 \newcommand{\skillproficiency}[2]{
-  #1 - \textit{#2}\\ % skill - proficiency
+  #1 & - & \textit{#2} \\[0.15cm]
 }
-
-%----------------------------------------------------------------------------------------
-
-\newcommand{\interestsgroup}[1]{
-\begin{tabbing}
-\hspace{5mm} \= \kill
-#1
-\end{tabbing}
-\vspace{-10mm}
-}
-
-\newcommand{\interest}[1]{
-  \sqbullet \> #1\\[3pt]
+\newcommand{\skill}[1]{
+  #1 & & \\[0.15cm]
 }
 
 %----------------------------------------------------------------------------------------
